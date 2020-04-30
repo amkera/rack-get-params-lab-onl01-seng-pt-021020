@@ -28,7 +28,7 @@ class Application
       #takes in a GET param with key "item"
       if @@items.include?(item)
         @@cart << item
-        #add item to cart 
+        #if item is in in stock, add item to cart 
         resp.write "added #{item}"
       else
         resp.write "We don't have that item"
